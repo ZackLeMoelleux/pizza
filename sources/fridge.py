@@ -28,7 +28,6 @@ class NotEnoughIngredientException(NotEnoughException):
 
 
 class Fridge:
-<<<<<<< HEAD
     def __init__(self, default_ingredients: int = 0, default_sauce: int = 4):
         if default_ingredients < 0:
             default_ingredients = 0
@@ -36,11 +35,7 @@ class Fridge:
             default_sauce = 0
         self._ingredients: Dict[str, int] = dict.fromkeys(ALL_INGREDIENTS, default_ingredients)
         self._sauces: Dict[str, int] = dict.fromkeys(ALL_SAUCES, default_sauce)
-=======
-    def __init__(self, default: int = 0):
-        self._ingredients: Dict[str, int] = dict.fromkeys(ALL_INGREDIENTS, default)
         self._count: Dict[str, int] = dict.fromkeys(ALL_INGREDIENTS, 0)
->>>>>>> 9245693 (Fridge can count)
 
     @property
     def is_empty(self) -> bool:
